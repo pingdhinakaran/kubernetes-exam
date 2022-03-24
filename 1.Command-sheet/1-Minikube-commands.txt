@@ -1,0 +1,22 @@
+$ To get the Help of minikube
+minikube help  
+
+$ To get the status of minikube cluster Driver to launch 
+minikube config set driver docker
+
+$ To get the create the minikube cluster with 2 node ( multi-node)
+minikube start --nodes 2 -p multinode-demo --driver=docker\n
+
+$ To get the status of minikube cluster 
+minikube status
+
+$ Once the cluster is launched you can check the cluster
+
+$ to get the nodes of the cluster
+kubectl get nodes 
+
+$ to get the nodes of the cluster ( wider informsation , node ip ..etc)
+kubectl get nodes -o wide
+
+$ to get the cluster information
+kubectl cluster-info

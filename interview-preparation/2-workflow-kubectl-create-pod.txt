@@ -1,0 +1,25 @@
+
+2) Pod creation / resorse creation workflow 
+------------------------------------------
+
+1. Kubectl to Api Server
+
+                  i) In the API server - Authenticate user and validated it 
+
+2. In this case API-server creates a pod object without assining into a node  
+
+3. Update the information in the ETCD server and update the user that the pod has beedn created.
+
+4. Then scheduler continuously monitor the API -Server and realizes that there is a new pod with no node assigned .
+
+5. The scheduiler identify the right node to place the new pod and inform that to kube-apiserver.
+
+6. Then the Api-server update those information into ETCD server. 
+
+7. Then the APi-server pass that information to the kublete to appropriate worker node. 
+
+8. Kubelet create the pod on the node and instruct container runtaine enginer to deploy the application image. 
+
+9. Once done . Kubelete update the status back to API-server and API-server update information to ETCD server.
+
+ 

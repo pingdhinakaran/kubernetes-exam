@@ -1,0 +1,24 @@
+$ Once the cluster is launched you can check the cluster
+
+$ to get the nodes of the cluster
+kubectl get nodes 
+
+$ to get the nodes of the cluster ( wider informsation , node ip ..etc)
+kubectl get nodes -o wide
+
+$ to get the cluster information
+kubectl cluster-info
+
+$To run one single pod using kubectl
+kubectl run nginx --image nginx
+
+Kubectl run (name of the pod)  --image (image name)
+
+$to get the pod information 
+kubectl get pods -o wide -n default 
+
+$ To describe the nginx pod --- to get more information 
+kubectl describe pod nginx  -n default
+
+$To get yaml information from pod 
+kubectl get pods/nginx -o yaml -n default
